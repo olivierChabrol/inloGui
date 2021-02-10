@@ -1,6 +1,11 @@
 # coding: utf-8
 
 from tkinter import Entry, Label, StringVar, Tk , Button
+from individu import Individu
+
+def get_fields():
+    i = Individu (widgets_entry["name"].get(), widgets_entry["last_name"].get(), widgets_entry["phone"].get(), widgets_entry["adress"].get(), widgets_entry["city"].get())
+    print(i)
 
 root = Tk()
 root.title('Annuaire')
@@ -32,5 +37,7 @@ for idi in bouton:
     button.grid(row=i+1,column=j)
 
     j += 1
+
+widgets_button["inserer"].config(command = get_fields)
 
 root.mainloop()
