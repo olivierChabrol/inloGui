@@ -3,8 +3,10 @@
 from tkinter import Entry, Label, StringVar, Tk , Button
 from individu import Individu
 
+dico = {}
 def get_fields():
     i = Individu (widgets_entry["name"].get(), widgets_entry["last_name"].get(), widgets_entry["phone"].get(), widgets_entry["adress"].get(), widgets_entry["city"].get())
+    dico[widgets_entry["name"].get()] = i
     print(i)
 
 root = Tk()
